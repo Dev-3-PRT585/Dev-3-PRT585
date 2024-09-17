@@ -1,0 +1,226 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AA7DDEFA-30DF-484C-84F4-169F0A8807E1}|Angular_NetCore.Server\\Angular_NetCore.Server.csproj|d:\\2024_s2\\prt585\\angular_repo\\angular_netcore\\angular_netcore.server\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA7DDEFA-30DF-484C-84F4-169F0A8807E1}|Angular_NetCore.Server\\Angular_NetCore.Server.csproj|solutionrelative:angular_netcore.server\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DB7D276-677C-4934-86FD-A71DCC1C59A6}|angular_netcore.client\\angular_netcore.client.esproj|d:\\2024_s2\\prt585\\angular_repo\\angular_netcore\\angular_netcore.client\\src\\app\\services\\customers.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{3DB7D276-677C-4934-86FD-A71DCC1C59A6}|angular_netcore.client\\angular_netcore.client.esproj|solutionrelative:angular_netcore.client\\src\\app\\services\\customers.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DB7D276-677C-4934-86FD-A71DCC1C59A6}|angular_netcore.client\\angular_netcore.client.esproj|d:\\2024_s2\\prt585\\angular_repo\\angular_netcore\\angular_netcore.client\\src\\app\\components\\customers\\edit-customer\\edit-customer.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{3DB7D276-677C-4934-86FD-A71DCC1C59A6}|angular_netcore.client\\angular_netcore.client.esproj|solutionrelative:angular_netcore.client\\src\\app\\components\\customers\\edit-customer\\edit-customer.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DB7D276-677C-4934-86FD-A71DCC1C59A6}|angular_netcore.client\\angular_netcore.client.esproj|d:\\2024_s2\\prt585\\angular_repo\\angular_netcore\\angular_netcore.client\\src\\app\\components\\customers\\edit-customer\\edit-customer.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3DB7D276-677C-4934-86FD-A71DCC1C59A6}|angular_netcore.client\\angular_netcore.client.esproj|solutionrelative:angular_netcore.client\\src\\app\\components\\customers\\edit-customer\\edit-customer.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DB7D276-677C-4934-86FD-A71DCC1C59A6}|angular_netcore.client\\angular_netcore.client.esproj|d:\\2024_s2\\prt585\\angular_repo\\angular_netcore\\angular_netcore.client\\src\\app\\components\\customers\\add-customer\\add-customer.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3DB7D276-677C-4934-86FD-A71DCC1C59A6}|angular_netcore.client\\angular_netcore.client.esproj|solutionrelative:angular_netcore.client\\src\\app\\components\\customers\\add-customer\\add-customer.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DB7D276-677C-4934-86FD-A71DCC1C59A6}|angular_netcore.client\\angular_netcore.client.esproj|d:\\2024_s2\\prt585\\angular_repo\\angular_netcore\\angular_netcore.client\\src\\app\\components\\customers\\customers-list\\customers-list.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{3DB7D276-677C-4934-86FD-A71DCC1C59A6}|angular_netcore.client\\angular_netcore.client.esproj|solutionrelative:angular_netcore.client\\src\\app\\components\\customers\\customers-list\\customers-list.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DB7D276-677C-4934-86FD-A71DCC1C59A6}|angular_netcore.client\\angular_netcore.client.esproj|d:\\2024_s2\\prt585\\angular_repo\\angular_netcore\\angular_netcore.client\\src\\app\\components\\customers\\add-customer\\add-customer.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{3DB7D276-677C-4934-86FD-A71DCC1C59A6}|angular_netcore.client\\angular_netcore.client.esproj|solutionrelative:angular_netcore.client\\src\\app\\components\\customers\\add-customer\\add-customer.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DB7D276-677C-4934-86FD-A71DCC1C59A6}|angular_netcore.client\\angular_netcore.client.esproj|d:\\2024_s2\\prt585\\angular_repo\\angular_netcore\\angular_netcore.client\\src\\app\\components\\customers\\customers-list\\customers-list.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3DB7D276-677C-4934-86FD-A71DCC1C59A6}|angular_netcore.client\\angular_netcore.client.esproj|solutionrelative:angular_netcore.client\\src\\app\\components\\customers\\customers-list\\customers-list.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DB7D276-677C-4934-86FD-A71DCC1C59A6}|angular_netcore.client\\angular_netcore.client.esproj|d:\\2024_s2\\prt585\\angular_repo\\angular_netcore\\angular_netcore.client\\src\\app\\app.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{3DB7D276-677C-4934-86FD-A71DCC1C59A6}|angular_netcore.client\\angular_netcore.client.esproj|solutionrelative:angular_netcore.client\\src\\app\\app.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DB7D276-677C-4934-86FD-A71DCC1C59A6}|angular_netcore.client\\angular_netcore.client.esproj|d:\\2024_s2\\prt585\\angular_repo\\angular_netcore\\angular_netcore.client\\src\\app\\app-routing.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{3DB7D276-677C-4934-86FD-A71DCC1C59A6}|angular_netcore.client\\angular_netcore.client.esproj|solutionrelative:angular_netcore.client\\src\\app\\app-routing.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA7DDEFA-30DF-484C-84F4-169F0A8807E1}|Angular_NetCore.Server\\Angular_NetCore.Server.csproj|d:\\2024_s2\\prt585\\angular_repo\\angular_netcore\\angular_netcore.server\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA7DDEFA-30DF-484C-84F4-169F0A8807E1}|Angular_NetCore.Server\\Angular_NetCore.Server.csproj|solutionrelative:angular_netcore.server\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DB7D276-677C-4934-86FD-A71DCC1C59A6}|angular_netcore.client\\angular_netcore.client.esproj|d:\\2024_s2\\prt585\\angular_repo\\angular_netcore\\angular_netcore.client\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3DB7D276-677C-4934-86FD-A71DCC1C59A6}|angular_netcore.client\\angular_netcore.client.esproj|solutionrelative:angular_netcore.client\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CustomersController.cs",
+              "DocumentMoniker": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\Angular_NetCore.Server\\Controllers\\CustomersController.cs",
+              "RelativeDocumentMoniker": "Angular_NetCore.Server\\Controllers\\CustomersController.cs",
+              "ToolTip": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\Angular_NetCore.Server\\Controllers\\CustomersController.cs",
+              "RelativeToolTip": "Angular_NetCore.Server\\Controllers\\CustomersController.cs",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAuwFMAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T16:37:57.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "edit-customer.component.ts",
+              "DocumentMoniker": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\angular_netcore.client\\src\\app\\Components\\Customers\\edit-customer\\edit-customer.component.ts",
+              "RelativeDocumentMoniker": "angular_netcore.client\\src\\app\\Components\\Customers\\edit-customer\\edit-customer.component.ts",
+              "ToolTip": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\angular_netcore.client\\src\\app\\Components\\Customers\\edit-customer\\edit-customer.component.ts",
+              "RelativeToolTip": "angular_netcore.client\\src\\app\\Components\\Customers\\edit-customer\\edit-customer.component.ts",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAqwDMAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-16T16:34:23.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "customers.service.ts",
+              "DocumentMoniker": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\angular_netcore.client\\src\\app\\services\\customers.service.ts",
+              "RelativeDocumentMoniker": "angular_netcore.client\\src\\app\\services\\customers.service.ts",
+              "ToolTip": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\angular_netcore.client\\src\\app\\services\\customers.service.ts",
+              "RelativeToolTip": "angular_netcore.client\\src\\app\\services\\customers.service.ts",
+              "ViewState": "AQIAABgAAAAAAAAAAAAqwCEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-16T16:42:57.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "edit-customer.component.html",
+              "DocumentMoniker": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\angular_netcore.client\\src\\app\\Components\\Customers\\edit-customer\\edit-customer.component.html",
+              "RelativeDocumentMoniker": "angular_netcore.client\\src\\app\\Components\\Customers\\edit-customer\\edit-customer.component.html",
+              "ToolTip": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\angular_netcore.client\\src\\app\\Components\\Customers\\edit-customer\\edit-customer.component.html",
+              "RelativeToolTip": "angular_netcore.client\\src\\app\\Components\\Customers\\edit-customer\\edit-customer.component.html",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAACcAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-09-16T16:23:40.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "customers-list.component.ts",
+              "DocumentMoniker": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\angular_netcore.client\\src\\app\\Components\\Customers\\customers-list\\customers-list.component.ts",
+              "RelativeDocumentMoniker": "angular_netcore.client\\src\\app\\Components\\Customers\\customers-list\\customers-list.component.ts",
+              "ToolTip": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\angular_netcore.client\\src\\app\\Components\\Customers\\customers-list\\customers-list.component.ts",
+              "RelativeToolTip": "angular_netcore.client\\src\\app\\Components\\Customers\\customers-list\\customers-list.component.ts",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAuwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-16T16:16:47.819Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "add-customer.component.html",
+              "DocumentMoniker": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\angular_netcore.client\\src\\app\\Components\\Customers\\add-customer\\add-customer.component.html",
+              "RelativeDocumentMoniker": "angular_netcore.client\\src\\app\\Components\\Customers\\add-customer\\add-customer.component.html",
+              "ToolTip": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\angular_netcore.client\\src\\app\\Components\\Customers\\add-customer\\add-customer.component.html",
+              "RelativeToolTip": "angular_netcore.client\\src\\app\\Components\\Customers\\add-customer\\add-customer.component.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-09-16T16:31:06.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "add-customer.component.ts",
+              "DocumentMoniker": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\angular_netcore.client\\src\\app\\Components\\Customers\\add-customer\\add-customer.component.ts",
+              "RelativeDocumentMoniker": "angular_netcore.client\\src\\app\\Components\\Customers\\add-customer\\add-customer.component.ts",
+              "ToolTip": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\angular_netcore.client\\src\\app\\Components\\Customers\\add-customer\\add-customer.component.ts",
+              "RelativeToolTip": "angular_netcore.client\\src\\app\\Components\\Customers\\add-customer\\add-customer.component.ts",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAIwBMAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-16T16:33:37.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "customers-list.component.html",
+              "DocumentMoniker": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\angular_netcore.client\\src\\app\\Components\\Customers\\customers-list\\customers-list.component.html",
+              "RelativeDocumentMoniker": "angular_netcore.client\\src\\app\\Components\\Customers\\customers-list\\customers-list.component.html",
+              "ToolTip": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\angular_netcore.client\\src\\app\\Components\\Customers\\customers-list\\customers-list.component.html",
+              "RelativeToolTip": "angular_netcore.client\\src\\app\\Components\\Customers\\customers-list\\customers-list.component.html",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAcAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-09-16T16:16:51.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "app-routing.module.ts",
+              "DocumentMoniker": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\angular_netcore.client\\src\\app\\app-routing.module.ts",
+              "RelativeDocumentMoniker": "angular_netcore.client\\src\\app\\app-routing.module.ts",
+              "ToolTip": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\angular_netcore.client\\src\\app\\app-routing.module.ts",
+              "RelativeToolTip": "angular_netcore.client\\src\\app\\app-routing.module.ts",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAUwBsAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-16T16:15:37.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "app.module.ts",
+              "DocumentMoniker": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\angular_netcore.client\\src\\app\\app.module.ts",
+              "RelativeDocumentMoniker": "angular_netcore.client\\src\\app\\app.module.ts",
+              "ToolTip": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\angular_netcore.client\\src\\app\\app.module.ts",
+              "RelativeToolTip": "angular_netcore.client\\src\\app\\app.module.ts",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-17T06:13:51.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\Angular_NetCore.Server\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Angular_NetCore.Server\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\Angular_NetCore.Server\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Angular_NetCore.Server\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T16:37:56.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "app.component.html",
+              "DocumentMoniker": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\angular_netcore.client\\src\\app\\app.component.html",
+              "RelativeDocumentMoniker": "angular_netcore.client\\src\\app\\app.component.html",
+              "ToolTip": "D:\\2024_S2\\PRT585\\Angular_Repo\\Angular_NetCore\\angular_netcore.client\\src\\app\\app.component.html",
+              "RelativeToolTip": "angular_netcore.client\\src\\app\\app.component.html",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAB4AAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-09-16T16:23:13.029Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
