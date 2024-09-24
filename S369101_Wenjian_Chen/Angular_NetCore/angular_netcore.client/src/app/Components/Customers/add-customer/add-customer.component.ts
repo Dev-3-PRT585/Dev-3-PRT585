@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomersService } from '../../../services/customers.service';
 import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-add-customer',
@@ -14,8 +15,8 @@ export class AddCustomerComponent implements OnInit {
     name: '',
     email: '',
     phone: 0,
-    salary: 0,
-    department: ''
+    level: 0,
+    note: ''
   };
   constructor(private customerService: CustomersService, private router: Router) { }
 
@@ -23,11 +24,20 @@ export class AddCustomerComponent implements OnInit {
       
   }
 
-  addCustomer() {
+  addCustomer(form: NgForm) {  // Updated to receive form as a parameter
+    // Check if the form is invalid
+    if (form.invalid) {
+      return; // Stop the submission
+    }
+
+    // If valid, proceed with adding the customer
     this.customerService.addCustomer(this.addCustomerRequest)
       .subscribe({
         next: (customer) => {
-          this.router.navigate(['customers']);
+          this.router.navigate(['customers']); // Navigate after successful submission
+        },
+        error: (err) => {
+          console.error('Error adding customer:', err); // Handle error
         }
       });
   }

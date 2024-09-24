@@ -8,8 +8,8 @@
         <th scope="col">Name</th>
         <th scope="col">Email</th>
         <th scope="col">Phone</th>
-        <th scope="col">Salary</th>
-        <th scope="col">Department</th>
+        <th scope="col">Level</th>
+        <th scope="col">Note</th>
         <th scope="col"></th>
       </tr>
     </thead>
@@ -19,8 +19,8 @@
         <td scope="row">{{ customer.name}}</td>
         <td scope="row">{{ customer.email}}</td>
         <td scope="row">{{ customer.phone}}</td>
-        <td scope="row">{{ customer.salary}}</td>
-        <td scope="row">{{ customer.department}}</td>
+        <td scope="row">{{ customer.level}}</td>
+        <td scope="row">{{ customer.note}}</td>
         <td><a [routerLink]="['/customers', 'edit', customer.id]">View</a></td>
       </tr>
     </tbody>

@@ -8,7 +8,7 @@ import { EditCustomerComponent } from './components/Customers/edit-customer/edit
 const routes: Routes = [
   {
     path: '',
-    component: inventoryListComponent
+    component: CustomersListComponent
   },
   {
     path: 'inventory',

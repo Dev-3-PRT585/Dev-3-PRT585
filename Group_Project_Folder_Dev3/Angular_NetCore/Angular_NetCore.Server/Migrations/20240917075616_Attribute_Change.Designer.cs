@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Angular_NetCore.Server.Migrations
 {
     [DbContext(typeof(DBEntitiesContext))]
-    [Migration("20240916133619_Initial Migration")]
-    partial class InitialMigration
+    [Migration("20240917075616_Attribute_Change")]
+    partial class Attribute_Change
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,19 +30,19 @@ namespace Angular_NetCore.Server.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Note")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("Level")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("Phone")
-                        .HasColumnType("bigint");
+                    b.Property<string>("Note")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("Level")
+                    b.Property<long>("Phone")
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");

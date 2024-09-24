@@ -65,8 +65,8 @@ namespace Angular_NetCore.Server.Controllers
             customer.Name = updateCustomerRequest.Name;
             customer.Email = updateCustomerRequest.Email;
             customer.Phone = updateCustomerRequest.Phone;
-            customer.Salary = updateCustomerRequest.Salary;
-            customer.Department = updateCustomerRequest.Department;
+            customer.Level = updateCustomerRequest.Level;
+            customer.Note = updateCustomerRequest.Note;
 
             await _dBEntitiesContext.SaveChangesAsync();
 

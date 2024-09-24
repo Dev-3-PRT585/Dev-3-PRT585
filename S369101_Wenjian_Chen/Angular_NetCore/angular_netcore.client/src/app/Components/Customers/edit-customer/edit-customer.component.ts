@@ -15,8 +15,8 @@ export class EditCustomerComponent {
     name: '',
     email: '',
     phone: 0,
-    salary: 0,
-    department: ''
+    level: 0,
+    note: ''
   }
   constructor(private route: ActivatedRoute, private customerService: CustomersService, private router: Router) { }
 

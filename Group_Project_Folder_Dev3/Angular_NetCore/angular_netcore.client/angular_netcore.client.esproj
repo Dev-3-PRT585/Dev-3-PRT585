@@ -16,4 +16,9 @@
     <Folder Include="src\app\Components\Customers\" />
     <Folder Include="src\app\environment\" />
   </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties _1vscode_4launch_1json__JsonSchema="" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

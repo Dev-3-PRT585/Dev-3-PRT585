@@ -28,19 +28,19 @@ namespace Angular_NetCore.Server.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Department")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("Level")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("Phone")
-                        .HasColumnType("bigint");
+                    b.Property<string>("Note")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("Salary")
+                    b.Property<long>("Phone")
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");

@@ -17,8 +17,8 @@ namespace Angular_NetCore.Server.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Phone = table.Column<long>(type: "bigint", nullable: false),
-                    Salary = table.Column<long>(type: "bigint", nullable: false),
-                    Department = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Level = table.Column<long>(type: "bigint", nullable: false),
+                    Note = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
