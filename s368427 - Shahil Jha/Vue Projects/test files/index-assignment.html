@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue PrimeVue CRUD App</title>
+
+    <!-- Vue and PrimeVue CDN links -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/primevue/core/core.min.js"></script>
+    <script src="https://unpkg.com/primevue/button/button.min.js"></script>
+    <script src="https://unpkg.com/primevue/inputtext/inputtext.min.js"></script>
+    <script src="https://unpkg.com/primevue/tabview/tabview.min.js"></script>
+    <script src="https://unpkg.com/primevue/tabpanel/tabpanel.min.js"></script>
+    <script src="https://unpkg.com/primevue/datatable/datatable.min.js"></script>
+    <script src="https://unpkg.com/primevue/column/column.min.js"></script>
+    <script src="https://unpkg.com/primeicons/primeicons.css"></script>
+
+    <!-- PrimeVue Theme and CSS -->
+    <link
+      href="https://unpkg.com/primevue/resources/themes/saga-blue/theme.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/primevue/resources/primevue.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/primeicons/primeicons.css" rel="stylesheet" />
+
+    <style>
+      .form-group {
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <TabView>
+        <TabPanel header="Bags">
+          <h2>Bag CRUD</h2>
+          <form @submit.prevent="createOrUpdateBag">
+            <div class="form-group">
+              <label for="bagId">Bag ID:</label>
+              <InputText v-model="bag.bagId" />
+            </div>
+            <div class="form-group">
+              <label for="color">Color:</label>
+              <InputText v-model="bag.color" />
+            </div>
+            <div class="form-group">
+              <label for="size">Size:</label>
+              <InputText v-model="bag.size" />
+            </div>
+            <Button label="Save" type="submit" />
+          </form>
+          <Button label="Fetch Bags" @click="fetchBags" />
+          <DataTable :value="bags">
+            <Column field="bagId" header="Bag ID"></Column>
+            <Column field="color" header="Color"></Column>
+            <Column field="size" header="Size"></Column>
+            <Column :body="deleteBagTemplate" header="Actions"></Column>
+          </DataTable>
+        </TabPanel>
+
+        <TabPanel header="Bottles">
+          <h2>Bottle CRUD</h2>
+          <form @submit.prevent="createOrUpdateBottle">
+            <div class="form-group">
+              <label for="bottleId">Bottle ID:</label>
+              <InputText v-model="bottle.bottleId" />
+            </div>
+            <div class="form-group">
+              <label for="color">Color:</label>
+              <InputText v-model="bottle.color" />
+            </div>
+            <div class="form-group">
+              <label for="size">Size:</label>
+              <InputText v-model="bottle.size" />
+            </div>
+            <Button label="Save" type="submit" />
+          </form>
+          <Button label="Fetch Bottles" @click="fetchBottles" />
+          <DataTable :value="bottles">
+            <Column field="bottleId" header="Bottle ID"></Column>
+            <Column field="color" header="Color"></Column>
+            <Column field="size" header="Size"></Column>
+            <Column :body="deleteBottleTemplate" header="Actions"></Column>
+          </DataTable>
+        </TabPanel>
+
+        <TabPanel header="Boxes">
+          <h2>Box CRUD</h2>
+          <form @submit.prevent="createOrUpdateBox">
+            <div class="form-group">
+              <label for="boxId">Box ID:</label>
+              <InputText v-model="box.boxId" />
+            </div>
+            <div class="form-group">
+              <label for="length">Length:</label>
+              <InputText v-model="box.length" />
+            </div>
+            <div class="form-group">
+              <label for="width">Width:</label>
+              <InputText v-model="box.width" />
+            </div>
+            <div class="form-group">
+              <label for="height">Height:</label>
+              <InputText v-model="box.height" />
+            </div>
+            <Button label="Save" type="submit" />
+          </form>
+          <Button label="Fetch Boxes" @click="fetchBoxes" />
+          <DataTable :value="boxes">
+            <Column field="boxId" header="Box ID"></Column>
+            <Column field="length" header="Length"></Column>
+            <Column field="width" header="Width"></Column>
+            <Column field="height" header="Height"></Column>
+            <Column :body="deleteBoxTemplate" header="Actions"></Column>
+          </DataTable>
+        </TabPanel>
+      </TabView>
+    </div>
+
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            bag: { bagId: 0, color: '', size: '' },
+            bottle: { bottleId: 0, color: '', size: '' },
+            box: { boxId: 0, length: 0, width: 0, height: 0 },
+            bags: [],
+            bottles: [],
+            boxes: [],
+          };
+        },
+        methods: {
+          // Bag CRUD Methods
+          async fetchBags() {
+            const response = await fetch('https://localhost:7246/api/Bag');
+            this.bags = await response.json();
+          },
+          async createOrUpdateBag() {
+            await fetch('https://localhost:7246/api/Bag', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(this.bag),
+            });
+            this.fetchBags();
+          },
+          async deleteBag(bagId) {
+            await fetch(`https://localhost:7246/api/Bag/${bagId}`, {
+              method: 'DELETE',
+            });
+            this.fetchBags();
+          },
+          deleteBagTemplate(rowData) {
+            return Vue.h(
+              'button',
+              { onClick: () => this.deleteBag(rowData.bagId) },
+              'Delete'
+            );
+          },
+
+          // Bottle CRUD Methods
+          async fetchBottles() {
+            const response = await fetch('https://localhost:7246/api/Bottle');
+            this.bottles = await response.json();
+          },
+          async createOrUpdateBottle() {
+            await fetch('https://localhost:7246/api/Bottle', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(this.bottle),
+            });
+            this.fetchBottles();
+          },
+          async deleteBottle(bottleId) {
+            await fetch(`https://localhost:7246/api/Bottle/${bottleId}`, {
+              method: 'DELETE',
+            });
+            this.fetchBottles();
+          },
+          deleteBottleTemplate(rowData) {
+            return Vue.h(
+              'button',
+              { onClick: () => this.deleteBottle(rowData.bottleId) },
+              'Delete'
+            );
+          },
+
+          // Box CRUD Methods
+          async fetchBoxes() {
+            const response = await fetch('https://localhost:7246/api/Box');
+            this.boxes = await response.json();
+          },
+          async createOrUpdateBox() {
+            await fetch('https://localhost:7246/api/Box', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(this.box),
+            });
+            this.fetchBoxes();
+          },
+          async deleteBox(boxId) {
+            await fetch(`https://localhost:7246/api/Box/${boxId}`, {
+              method: 'DELETE',
+            });
+            this.fetchBoxes();
+          },
+          deleteBoxTemplate(rowData) {
+            return Vue.h(
+              'button',
+              { onClick: () => this.deleteBox(rowData.boxId) },
+              'Delete'
+            );
+          },
+        },
+      });
+
+      // Register PrimeVue components
+      app.component('TabView', PrimeVue.TabView);
+      app.component('TabPanel', PrimeVue.TabPanel);
+      app.component('InputText', PrimeVue.InputText);
+      app.component('Button', PrimeVue.Button);
+      app.component('DataTable', PrimeVue.DataTable);
+      app.component('Column', PrimeVue.Column);
+
+      app.mount('#app');
+    </script>
+  </body>
+</html>

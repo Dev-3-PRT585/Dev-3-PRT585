@@ -1,0 +1,10 @@
+- all 4 tech is implemented when we use SignalR.
+	- [[Web Sockets]]
+	- [[Event Source]]
+	- [[Long Polling]]
+	- [[Forever Frame]]
+- all changes and updated to the 4 tech is implemented in SignalR in one go.
+- it is an ABSTRACTION of the 4 techs.
+- cross compactible
+- Grouping
+- Scalability in even an open connection

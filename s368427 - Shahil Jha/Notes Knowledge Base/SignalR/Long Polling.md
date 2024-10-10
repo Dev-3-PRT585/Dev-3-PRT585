@@ -1,0 +1,3 @@
+- not a persistent connection, only simulated
+- only one way communication, server can't push new data, only responds to requests
+- can have timeout

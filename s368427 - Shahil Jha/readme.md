@@ -1,1 +1,1 @@
-# Placeholder text
+# The _Notes Knowledge Base_ is a obsidian vault. You can use Obsidian software to view it more easily or just any plain text editor, since it's all markdown file.

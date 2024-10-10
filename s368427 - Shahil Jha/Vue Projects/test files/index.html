@@ -1,0 +1,661 @@
+<!-- this is a test for the usage of Vue.js using CDN -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Test</title>
+  </head>
+  <body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/primevue/umd/primevue.min.js"></script>
+    <script src="https://unpkg.com/@primevue/themes/umd/aura.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <div id="app">
+      <p-tabs value="0">
+        <p-tablist>
+          <p-tab value="0">Bags</p-tab>
+          <p-tab value="1">Box</p-tab>
+          <p-tab value="2">Bottle</p-tab>
+        </p-tablist>
+        <p-tabpanels>
+          <p-tabpanel value="0">
+            <div>
+              <p-button
+                label="Load Data"
+                severity="info"
+                icon="pi pi-refresh"
+                iconPos="right"
+                @click="fetchBags"
+                class="mx-1"
+              ></p-button>
+
+              <p-button
+                label="Add Data"
+                severity="success"
+                icon="pi pi-refresh"
+                iconPos="right"
+                @click="bagAddVisible = true"
+                class="mx-1"
+              ></p-button>
+              <p-dialog
+                v-model:visible="bagAddVisible"
+                modal
+                header="Add Data"
+                :style="{ width: '25rem' }"
+              >
+                <span class="text-surface-500 dark:text-surface-400 block mb-8"
+                  >Add your information.</span
+                >
+                <div class="flex items-center gap-4 mb-4">
+                  <label for="bagColor" class="font-semibold w-24">Color</label>
+                  <p-inputtext
+                    id="bagColor"
+                    class="flex-auto"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="flex items-center gap-4 mb-8">
+                  <label for="bagSize" class="font-semibold w-24">Size</label>
+                  <p-inputtext
+                    id="bagSize"
+                    class="flex-auto"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="flex justify-end gap-2">
+                  <button
+                    type="button"
+                    label="Cancel"
+                    severity="secondary"
+                    @click="bagAddVisible = false"
+                  ></button>
+                  <button
+                    type="button"
+                    label="Save"
+                    @click="bagAddVisible = false"
+                  ></button>
+                </div>
+              </p-dialog>
+
+              <p-button
+                label="Update Data"
+                severity="warn"
+                icon="pi pi-refresh"
+                iconPos="right"
+                @click="fetchBags(); bagUpdateVisible=true;"
+                class="mx-1"
+              ></p-button>
+              <p-dialog
+                v-model:visible="bagUpdateVisible"
+                modal
+                header="Update Data"
+                :style="{ width: '25rem' }"
+              >
+                <span class="text-surface-500 dark:text-surface-400 block mb-8"
+                  >Update your information.</span
+                >
+                <div class="flex items-center gap-4 mb-4">
+                  <label for="bagColor" class="font-semibold w-24">Color</label>
+                  <p-inputtext
+                    id="bagColor"
+                    class="flex-auto"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="flex items-center gap-4 mb-8">
+                  <label for="bagSize" class="font-semibold w-24">Size</label>
+                  <p-inputtext
+                    id="bagSize"
+                    class="flex-auto"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="flex justify-end gap-2">
+                  <button
+                    type="button"
+                    label="Cancel"
+                    severity="secondary"
+                    @click="bagUpdateVisible = false"
+                  ></button>
+                  <button
+                    type="button"
+                    label="Save"
+                    @click="bagUpdateVisible = false"
+                  ></button>
+                </div>
+              </p-dialog>
+
+              <p-button
+                label="Delete Data"
+                severity="danger"
+                icon="pi pi-refresh"
+                iconPos="right"
+                @click="fetchBags(); bagDeleteVisible = true;"
+                class="mx-1"
+              ></p-button>
+              <p-dialog
+                v-model:visible="bagDeleteVisible"
+                modal
+                header="Delete Data"
+                :style="{ width: '25rem' }"
+              >
+                <span class="text-surface-500 dark:text-surface-400 block mb-8"
+                  >Delete Data.</span
+                >
+                <div class="flex items-center gap-4 mb-4">
+                  <label for="bagId" class="font-semibold w-24">ID</label>
+                  <p-inputtext
+                    id="bagId"
+                    class="flex-auto"
+                    autocomplete="off"
+                  />
+                </div>
+
+                <div class="flex justify-end gap-2">
+                  <button
+                    type="button"
+                    label="Cancel"
+                    severity="secondary"
+                    @click="bagDeleteVisible = false"
+                  ></button>
+                  <button
+                    type="button"
+                    label="Save"
+                    @click="bagDeleteVisible = false"
+                  ></button>
+                </div>
+              </p-dialog>
+
+              <br />
+            </div>
+            <p-divider></p-divider>
+
+            <p-fieldset legend="Bags Table">
+              <div v-if="bags.length == 0">
+                <p>Please Load Data</p>
+              </div>
+              <div v-else>
+                <p-datatable :value="bags" tableStyle="min-width: 50rem">
+                  <p-column field="BagId" header="Bag Id"></p-column>
+                  <p-column field="Color" header="Color"></p-column>
+                  <p-column field="Size" header="Size"></p-column>
+                </p-datatable>
+              </div>
+            </p-fieldset>
+          </p-tabpanel>
+          <p-tabpanel value="1">
+            <div>
+              <p-button
+                label="Load Data"
+                severity="info"
+                icon="pi pi-refresh"
+                iconPos="right"
+                @click="fetchBags"
+                class="mx-1"
+              ></p-button>
+
+              <p-button
+                label="Add Data"
+                severity="success"
+                icon="pi pi-refresh"
+                iconPos="right"
+                @click="bagAddVisible = true"
+                class="mx-1"
+              ></p-button>
+              <p-dialog
+                v-model:visible="bagAddVisible"
+                modal
+                header="Add Data"
+                :style="{ width: '25rem' }"
+              >
+                <span class="text-surface-500 dark:text-surface-400 block mb-8"
+                  >Add your information.</span
+                >
+                <div class="flex items-center gap-4 mb-4">
+                  <label for="bagColor" class="font-semibold w-24">Color</label>
+                  <p-inputtext
+                    id="bagColor"
+                    class="flex-auto"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="flex items-center gap-4 mb-8">
+                  <label for="bagSize" class="font-semibold w-24">Size</label>
+                  <p-inputtext
+                    id="bagSize"
+                    class="flex-auto"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="flex justify-end gap-2">
+                  <button
+                    type="button"
+                    label="Cancel"
+                    severity="secondary"
+                    @click="bagAddVisible = false"
+                  ></button>
+                  <button
+                    type="button"
+                    label="Save"
+                    @click="bagAddVisible = false"
+                  ></button>
+                </div>
+              </p-dialog>
+
+              <p-button
+                label="Update Data"
+                severity="warn"
+                icon="pi pi-refresh"
+                iconPos="right"
+                @click="fetchBags(); bagUpdateVisible=true;"
+                class="mx-1"
+              ></p-button>
+              <p-dialog
+                v-model:visible="bagUpdateVisible"
+                modal
+                header="Update Data"
+                :style="{ width: '25rem' }"
+              >
+                <span class="text-surface-500 dark:text-surface-400 block mb-8"
+                  >Update your information.</span
+                >
+                <div class="flex items-center gap-4 mb-4">
+                  <label for="bagColor" class="font-semibold w-24">Color</label>
+                  <p-inputtext
+                    id="bagColor"
+                    class="flex-auto"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="flex items-center gap-4 mb-8">
+                  <label for="bagSize" class="font-semibold w-24">Size</label>
+                  <p-inputtext
+                    id="bagSize"
+                    class="flex-auto"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="flex justify-end gap-2">
+                  <button
+                    type="button"
+                    label="Cancel"
+                    severity="secondary"
+                    @click="bagUpdateVisible = false"
+                  ></button>
+                  <button
+                    type="button"
+                    label="Save"
+                    @click="bagUpdateVisible = false"
+                  ></button>
+                </div>
+              </p-dialog>
+
+              <p-button
+                label="Delete Data"
+                severity="danger"
+                icon="pi pi-refresh"
+                iconPos="right"
+                @click="fetchBags(); bagDeleteVisible = true;"
+                class="mx-1"
+              ></p-button>
+              <p-dialog
+                v-model:visible="bagDeleteVisible"
+                modal
+                header="Delete Data"
+                :style="{ width: '25rem' }"
+              >
+                <span class="text-surface-500 dark:text-surface-400 block mb-8"
+                  >Delete Data.</span
+                >
+                <div class="flex items-center gap-4 mb-4">
+                  <label for="bagId" class="font-semibold w-24">ID</label>
+                  <p-inputtext
+                    id="bagId"
+                    class="flex-auto"
+                    autocomplete="off"
+                  />
+                </div>
+
+                <div class="flex justify-end gap-2">
+                  <button
+                    type="button"
+                    label="Cancel"
+                    severity="secondary"
+                    @click="bagDeleteVisible = false"
+                  ></button>
+                  <button
+                    type="button"
+                    label="Save"
+                    @click="bagDeleteVisible = false"
+                  ></button>
+                </div>
+              </p-dialog>
+
+              <br />
+            </div>
+            <p-divider></p-divider>
+
+            <p-fieldset legend="Bags Table">
+              <div v-if="bags.length == 0">
+                <p>Please Load Data</p>
+              </div>
+              <div v-else>
+                <p-datatable :value="bags" tableStyle="min-width: 50rem">
+                  <p-column field="BagId" header="Bag Id"></p-column>
+                  <p-column field="Color" header="Color"></p-column>
+                  <p-column field="Size" header="Size"></p-column>
+                </p-datatable>
+              </div>
+            </p-fieldset>
+          </p-tabpanel>
+          <p-tabpanel value="2">
+            <div>
+              <p-button
+                label="Load Data"
+                severity="info"
+                icon="pi pi-refresh"
+                iconPos="right"
+                @click="fetchBags"
+                class="mx-1"
+              ></p-button>
+
+              <p-button
+                label="Add Data"
+                severity="success"
+                icon="pi pi-refresh"
+                iconPos="right"
+                @click="bagAddVisible = true"
+                class="mx-1"
+              ></p-button>
+              <p-dialog
+                v-model:visible="bagAddVisible"
+                modal
+                header="Add Data"
+                :style="{ width: '25rem' }"
+              >
+                <span class="text-surface-500 dark:text-surface-400 block mb-8"
+                  >Add your information.</span
+                >
+                <div class="flex items-center gap-4 mb-4">
+                  <label for="bagColor" class="font-semibold w-24">Color</label>
+                  <p-inputtext
+                    id="bagColor"
+                    class="flex-auto"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="flex items-center gap-4 mb-8">
+                  <label for="bagSize" class="font-semibold w-24">Size</label>
+                  <p-inputtext
+                    id="bagSize"
+                    class="flex-auto"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="flex justify-end gap-2">
+                  <button
+                    type="button"
+                    label="Cancel"
+                    severity="secondary"
+                    @click="bagAddVisible = false"
+                  ></button>
+                  <button
+                    type="button"
+                    label="Save"
+                    @click="bagAddVisible = false"
+                  ></button>
+                </div>
+              </p-dialog>
+
+              <p-button
+                label="Update Data"
+                severity="warn"
+                icon="pi pi-refresh"
+                iconPos="right"
+                @click="fetchBags(); bagUpdateVisible=true;"
+                class="mx-1"
+              ></p-button>
+              <p-dialog
+                v-model:visible="bagUpdateVisible"
+                modal
+                header="Update Data"
+                :style="{ width: '25rem' }"
+              >
+                <span class="text-surface-500 dark:text-surface-400 block mb-8"
+                  >Update your information.</span
+                >
+                <div class="flex items-center gap-4 mb-4">
+                  <label for="bagColor" class="font-semibold w-24">Color</label>
+                  <p-inputtext
+                    id="bagColor"
+                    class="flex-auto"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="flex items-center gap-4 mb-8">
+                  <label for="bagSize" class="font-semibold w-24">Size</label>
+                  <p-inputtext
+                    id="bagSize"
+                    class="flex-auto"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="flex justify-end gap-2">
+                  <button
+                    type="button"
+                    label="Cancel"
+                    severity="secondary"
+                    @click="bagUpdateVisible = false"
+                  ></button>
+                  <button
+                    type="button"
+                    label="Save"
+                    @click="bagUpdateVisible = false"
+                  ></button>
+                </div>
+              </p-dialog>
+
+              <p-button
+                label="Delete Data"
+                severity="danger"
+                icon="pi pi-refresh"
+                iconPos="right"
+                @click="fetchBags(); bagDeleteVisible = true;"
+                class="mx-1"
+              ></p-button>
+              <p-dialog
+                v-model:visible="bagDeleteVisible"
+                modal
+                header="Delete Data"
+                :style="{ width: '25rem' }"
+              >
+                <span class="text-surface-500 dark:text-surface-400 block mb-8"
+                  >Delete Data.</span
+                >
+                <div class="flex items-center gap-4 mb-4">
+                  <label for="bagId" class="font-semibold w-24">ID</label>
+                  <p-inputtext
+                    id="bagId"
+                    class="flex-auto"
+                    autocomplete="off"
+                  />
+                </div>
+
+                <div class="flex justify-end gap-2">
+                  <button
+                    type="button"
+                    label="Cancel"
+                    severity="secondary"
+                    @click="bagDeleteVisible = false"
+                  ></button>
+                  <button
+                    type="button"
+                    label="Save"
+                    @click="bagDeleteVisible = false"
+                  ></button>
+                </div>
+              </p-dialog>
+
+              <br />
+            </div>
+            <p-divider></p-divider>
+
+            <p-fieldset legend="Bags Table">
+              <div v-if="bags.length == 0">
+                <p>Please Load Data</p>
+              </div>
+              <div v-else>
+                <p-datatable :value="bags" tableStyle="min-width: 50rem">
+                  <p-column field="BagId" header="Bag Id"></p-column>
+                  <p-column field="Color" header="Color"></p-column>
+                  <p-column field="Size" header="Size"></p-column>
+                </p-datatable>
+              </div>
+            </p-fieldset>
+          </p-tabpanel>
+        </p-tabpanels>
+      </p-tabs>
+    </div>
+
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            bag: { bagId: 0, color: "", size: "" },
+            bottle: { bottleId: 0, color: "", size: "" },
+            box: { boxId: 0, length: 0, width: 0, height: 0 },
+            bags: [],
+            bottles: [],
+            boxes: [],
+            bagAddVisible: false,
+            bagUpdateVisible: false,
+            bagDeleteVisible: false,
+            boxAddVisible: false,
+            boxUpdateVisible: false,
+            boxDeleteVisible: false,
+            bottleAddVisible: false,
+            bottleUpdateVisible: false,
+            bottleDeleteVisible: false,
+          };
+        },
+        methods: {
+          // Bag CRUD Methods
+          async fetchBags() {
+            console.log("checkpint #1");
+            const response = await fetch("https://localhost:7246/api/Bag", {
+              method: "GET",
+              credentials: "include",
+              //   mode: "no-cors",
+              headers: {
+                "Content-Type": "application/json",
+              },
+            });
+            this.bags = await response.json();
+          },
+          async createOrUpdateBag() {
+            await fetch("https://localhost:7246/api/Bag", {
+              method: "POST",
+              credentials: "include",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(this.bag),
+            });
+            this.fetchBags();
+          },
+          async deleteBag(bagId) {
+            await fetch(`https://localhost:7246/api/Bag/${bagId}`, {
+              method: "DELETE",
+              credentials: "include",
+            });
+            this.fetchBags();
+          },
+          deleteBagTemplate(rowData) {
+            return `<Button label="Delete" @click="deleteBag(${rowData.bagId})" />`;
+          },
+
+          // Bottle CRUD Methods
+          async fetchBottles() {
+            const response = await fetch("https://localhost:7246/api/Bottle", {
+              method: "GET",
+              credentials: "include",
+            });
+            this.bottles = await response.json();
+          },
+          async createOrUpdateBottle() {
+            await fetch("https://localhost:7246/api/Bottle", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              credentials: "include",
+
+              body: JSON.stringify(this.bottle),
+            });
+            this.fetchBottles();
+          },
+          async deleteBottle(bottleId) {
+            await fetch(`https://localhost:7246/api/Bottle/${bottleId}`, {
+              method: "DELETE",
+              credentials: "include",
+            });
+            this.fetchBottles();
+          },
+          deleteBottleTemplate(rowData) {
+            return `<Button label="Delete" @click="deleteBottle(${rowData.bottleId})" />`;
+          },
+
+          // Box CRUD Methods
+          async fetchBoxes() {
+            const response = await fetch("https://localhost:7246/api/Box", {
+              method: "GET",
+              credentials: "include",
+            });
+            this.boxes = await response.json();
+          },
+          async createOrUpdateBox() {
+            await fetch("https://localhost:7246/api/Box", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              credentials: "include",
+              body: JSON.stringify(this.box),
+            });
+            this.fetchBoxes();
+          },
+          async deleteBox(boxId) {
+            await fetch(`https://localhost:7246/api/Box/${boxId}`, {
+              method: "DELETE",
+              credentials: "include",
+            });
+            this.fetchBoxes();
+          },
+          deleteBoxTemplate(rowData) {
+            return `<Button label="Delete" @click="deleteBox(${rowData.boxId})" />`;
+          },
+        },
+      });
+
+      app.use(PrimeVue.Config, {
+        theme: {
+          preset: PrimeVue.Themes.Aura,
+        },
+      });
+
+      app.component("p-tabs", PrimeVue.Tabs);
+      app.component("p-tab", PrimeVue.Tab);
+      app.component("p-tabpanels", PrimeVue.TabPanels);
+      app.component("p-tabpanel", PrimeVue.TabPanel);
+      app.component("p-tablist", PrimeVue.TabList);
+      app.component("p-datatable", PrimeVue.DataTable);
+      app.component("p-column", PrimeVue.Column);
+      app.component("p-columngroup", PrimeVue.ColumnGroup);
+      app.component("p-row", PrimeVue.Row);
+      app.component("p-divider", PrimeVue.Divider);
+      app.component("p-fieldset", PrimeVue.Fieldset);
+      app.component("p-button", PrimeVue.Button);
+      app.component("p-card", PrimeVue.Card);
+      app.component("p-dialog", PrimeVue.Dialog);
+      app.component("p-inputtext", PrimeVue.InputText);
+
+      app.mount("#app");
+    </script>
+  </body>
+</html>

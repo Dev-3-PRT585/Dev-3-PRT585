@@ -1,0 +1,1 @@
+There are a few Vue.js extensions for VS Code. The ones that I use are the **Vue - Official** and **Vue 3 Snippets** extensions. However, if you find something that you like better, that's fine. Vetur and Volar are quite popular. You just need something that will give you the correct syntax highlighting for .vue files. This is the file extension that Vue components use.

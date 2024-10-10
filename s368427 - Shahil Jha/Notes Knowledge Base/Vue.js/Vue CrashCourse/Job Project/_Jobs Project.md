@@ -1,0 +1,38 @@
+Now that you know about the structure of a component and interpolation and directives, events, etc, let's start our main project. We can go ahead and clear all of this code out of the `App.vue` file. Im actually going to put it into a file called `App2.vue` just to keep it in the repo for you if you need to go back to it.
+
+# Table of Content
+
+1. [[Theme Files]]
+2. [[Your First UI Component]]
+3. [[Hero Component]]
+4. [[Props]]
+5. [[HomeCards Component]]
+6. [[Wrapper Components & slot]]
+7. [[Vue Crash Course - Working With Data]]
+8. [[Vue Crash Course - Make Data Reactive]]
+9. [[JobListing Component]]
+10. [[showButton Prop]]
+11. [[computed & Truncated Description]]
+12. [[Icons (PrimeIcons)]]
+13. [[Vue Router]]
+14. [[Vue Crash Course - Views]]
+15. [[Jobs View]]
+16. [[Vue Crash Course -  Links]]
+17. [[View All Jobs Link]]
+18. [[Vue Crash Course - Not Found Page]]
+19. [[Vue Crash Course - Single Job View]]
+20. [[Vue Crash Course - JSON Server & Getting Data]]
+21. [[Vue Crash Course - JSON Server Script]]
+22. [[Vue Crash Course - Fetch Data]]
+23. [[Vue Crash Course - Using reactive]]
+24. [[Vue Crash Course - Data For Single Job]]
+25. [[Vue Crash Course - Back Button]]
+26. [[Vue Crash Course - Proxying Requests]]
+27. [[Vue Crash Course - Add Job Page]]
+28. [[Vue Crash Course - @submit.prevent]]
+29. [[Vue Crash Course - Handling Form Submission]]
+30. [[Vue Crash Course - Vue Toastification]]
+31. [[Vue Crash Course - Deleting a Job]]
+32. [[Vue Crash Course - Editing a Job]]
+
+# THE END 

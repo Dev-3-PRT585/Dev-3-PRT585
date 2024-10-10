@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "99877601c3dcffc9",
+        "id": "6e5b841656db7aef",
         "type": "tabs",
         "children": [
           {
-            "id": "1bcad17e85115438",
+            "id": "87c301540a4d18db",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Vue.js/_Vue Intro.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2873895499d0f63d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Vue.js/Create Vue.md",
+                "file": "Vue.js/Vue CrashCourse/Job Project/_Jobs Project.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Vue.js/Create Vue.md",
+                "file": "Vue.js/Vue CrashCourse/Job Project/_Jobs Project.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Vue.js/Create Vue.md",
+                "file": "Vue.js/Vue CrashCourse/Job Project/_Jobs Project.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Vue.js/Create Vue.md"
+                "file": "Vue.js/Vue CrashCourse/Job Project/_Jobs Project.md"
               }
             }
           }
@@ -159,24 +146,39 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2873895499d0f63d",
+  "active": "da6d1c9f2b778f85",
   "lastOpenFiles": [
-    "Vue.js/_Vue Intro.md",
+    "Vue.js/Vue CrashCourse/Job Project/Vue Crash Course - Editing a Job.md",
+    "Vue.js/Vue CrashCourse/Job Project/_Jobs Project.md",
+    "Vue Crash Course -.md",
+    "Vue.js/Vue CrashCourse/Job Project/Vue Crash Course - Deleting a Job.md",
+    "Vue.js/Vue CrashCourse/Job Project/Vue Crash Course - Vue Toastification.md",
+    "Vue.js/Vue CrashCourse/Job Project/Vue Crash Course - Handling Form Submission.md",
+    "Vue.js/Vue CrashCourse/Job Project/Vue Crash Course - @submit.prevent.md",
+    "Vue.js/Vue CrashCourse/Job Project/Vue Crash Course - Add Job Page.md",
+    "Vue.js/Vue CrashCourse/Job Project/Vue Crash Course - Proxying Requests.md",
+    "Vue.js/Vue CrashCourse/Job Project/Vue Crash Course - Back Button.md",
+    "Vue.js/Vue CrashCourse/Job Project/Vue Crash Course - Data For Single Job.md",
+    "Vue.js/Vue CrashCourse/Job Project/Vue Crash Course - Using reactive.md",
+    "Vue.js/Vue CrashCourse/Job Project/Vue Crash Course - Fetch Data.md",
+    "Vue.js/Vue CrashCourse/Job Project/Vue Crash Course - JSON Server Script.md",
+    "Vue.js/Vue CrashCourse/Job Project/Vue Crash Course - JSON Server & Getting Data.md",
+    "Vue.js/Vue CrashCourse/Job Project/Vue Crash Course - Single Job View.md",
+    "Vue.js/Vue CrashCourse/Job Project/Vue Crash Course - Not Found Page.md",
+    "Vue.js/Vue CrashCourse/Job Project/View All Jobs Link.md",
+    "Vue.js/Vue CrashCourse/Job Project/Vue Crash Course -  Links.md",
+    "Vue.js/Vue CrashCourse/Job Project/Jobs View.md",
+    "Vue.js/Vue CrashCourse/Job Project/Vue Crash Course - Views.md",
+    "Vue.js/Vue CrashCourse/Job Project/Vue Router.md",
+    "Vue.js/Vue CrashCourse/Job Project/Icons (PrimeIcons).md",
+    "Vue.js/Vue CrashCourse/Job Project/computed & Truncated Description.md",
+    "Vue.js/Vue CrashCourse/Job Project/showButton Prop.md",
+    "Vue.js/Vue CrashCourse/Job Project/JobListing Component.md",
+    "Vue.js/Vue CrashCourse/Job Project",
+    "_Assets/Pasted image 20241010225959.png",
+    "Vue.js/Vue CrashCourse",
     "_Assets/bash prompt options after create-vue.png",
-    "Vue.js/Create Vue.md",
-    "Vue.js/Vue Setup by CDN.md",
-    "Vue.js/Vue Components.md",
-    "Vue.js/Options API vs Composition API.md",
-    "Vue.js/Grindsome.md",
-    "Vue.js/CDN (Content Delivery Network).md",
-    "Vue.js/Single Page Applications (SPAs).md",
-    "Vue.js/Nuxt.js.md",
-    "Vue.js/CDN.md",
-    "CDN (Content Deli).md",
-    "Vue.js/Vite.md",
     "_Assets",
-    "Vue.js",
-    "create a link.md",
-    "Welcome.md"
+    "Vue.js"
   ]
 }

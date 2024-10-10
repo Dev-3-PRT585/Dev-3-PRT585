@@ -29,3 +29,4 @@
 - _Vue CLI:_ Command line interface for setting up Vue projects. This is no longer recommended.
 - _[[Create Vue]]:_ Uses [[Vite]], which includes features like hot-reloading, out of the box TypeScript and an ecosystem of plugins.
 - _[[Nuxt.js]] & [[Grindsome]]:_ SSR & SSG frameworks that use Vue.
+

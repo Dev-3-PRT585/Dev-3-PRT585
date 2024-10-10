@@ -1,0 +1,4 @@
+ - Bi-directional persistent connection(agreement between client and server)
+- multi user
+- Full duplex (client and server can send each other data at the same time)
+- asynchronous 
